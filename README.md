@@ -1,7 +1,7 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>ENTER YOUR NAME : Saravanan G</H3>
+<H3>ENTER YOUR REGISTER NO : 212223230194</H3>
 <H3>EX. NO.1</H3>
-<H3>DATE</H3>
+<H3>DATE:10/03/2025</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
@@ -37,11 +37,51 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+### DATASET:
+```
+import pandas as pd                                               
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+df=pd.read_csv("/content/Churn_Modelling (1).csv",index_col="RowNumber")        
+df.head()
+
+```
+### NULL VALUES:
+```
+df.isnull().sum()
+```
+### NORMALIZED DATA:
+
+```
+df=df.drop(['Surname', 'Geography','Gender'], axis=1)              
+scaler=StandardScaler()                                             
+df=pd.DataFrame(scaler.fit_transform(df))
+df.head()
+```
+
+### DATA SPLITTING:
+```
+X,Y=df.iloc[:,:-1].values ,df.iloc[:,-1].values                     
+print('Input:\n',X,'\nOutput:\n',Y)
+```
+
+### TRAIN AND TEST DATA:
+```
+Xtrain,Xtest,Ytrain,Ytest = train_test_split(X, Y, test_size=0.2)  
+print("Xtrain:\n" ,Xtrain, "\nXtest:\n", Xtest)                     
+print("\nYtrain:\n" ,Ytrain, "\nYtest:\n", Ytest)
+```
 
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+![Screenshot 2025-03-07 113629](https://github.com/user-attachments/assets/e79fb6c7-9d38-4a15-b839-8fdbf5e85360)
+![Screenshot 2025-03-07 113732](https://github.com/user-attachments/assets/36f71788-5206-4fc9-b0b4-01053f93a510)
+![Screenshot 2025-03-07 113811](https://github.com/user-attachments/assets/0d24aa4f-4ed8-48c1-9440-d7f9f0e51aa1)
+![Screenshot 2025-03-07 113858](https://github.com/user-attachments/assets/92696038-bc73-4b7e-89a7-e713356e6fff)
+![Screenshot 2025-03-07 113939](https://github.com/user-attachments/assets/29545581-80de-44da-8649-5dcc86084dad)
+
 
 
 ## RESULT:
