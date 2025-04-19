@@ -44,7 +44,7 @@ import io
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-df=pd.read_csv("/content/Churn_Modelling (1).csv",index_col="RowNumber")        
+df=pd.read_csv("Churn_Modelling.csv",index_col="RowNumber")        
 df.head()
 
 ```
@@ -76,11 +76,12 @@ print("\nYtrain:\n" ,Ytrain, "\nYtest:\n", Ytest)
 
 
 ## OUTPUT:
-![Screenshot 2025-03-07 113629](https://github.com/user-attachments/assets/e79fb6c7-9d38-4a15-b839-8fdbf5e85360)
-![Screenshot 2025-03-07 113732](https://github.com/user-attachments/assets/36f71788-5206-4fc9-b0b4-01053f93a510)
-![Screenshot 2025-03-07 113811](https://github.com/user-attachments/assets/0d24aa4f-4ed8-48c1-9440-d7f9f0e51aa1)
-![Screenshot 2025-03-07 113858](https://github.com/user-attachments/assets/92696038-bc73-4b7e-89a7-e713356e6fff)
-![Screenshot 2025-03-07 113939](https://github.com/user-attachments/assets/29545581-80de-44da-8649-5dcc86084dad)
+![image](https://github.com/user-attachments/assets/94e3b87a-0ebc-4c28-be53-69578d9e8143)
+![image](https://github.com/user-attachments/assets/75ca120d-5c74-4bf8-af8c-444128653e77)
+![image](https://github.com/user-attachments/assets/d02ab751-dbbc-462e-ae69-899aa96d51ef)
+![image](https://github.com/user-attachments/assets/d2ba9ece-eebf-44fc-8c10-8c7181cd721c)
+![image](https://github.com/user-attachments/assets/525a1068-a8d1-4435-93b6-50046324f45e)
+
 
 
 
